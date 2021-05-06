@@ -2,7 +2,7 @@
 
 require 'test_helper'
 
-class ContactsControllerTest < ActionDispatch::IntegrationTest
+class ContactTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
