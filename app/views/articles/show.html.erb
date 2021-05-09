@@ -3,6 +3,7 @@
 
 <h2>Comments:</h2>
 
+<%= 'No comments' if @article.comments.empty? %>
 <% @article.comments.each do |comment| %>
   <p>
     <i><%= comment.author %> said:</i><br>
