@@ -58,3 +58,8 @@ end
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 gem 'devise'
+
+group :test, :development do
+  gem 'rspec-rails'
+  gem 'shoulda-matchers'
+end
