@@ -10,14 +10,20 @@ describe Article do
     it { should have_many :comments }
   end
 
-  describe Article do
-    describe "#subject" do
-      it "returns the article title" do
-        article = create(:article, title: 'Lorem ipsom')
 
-        expect(article.subject).to  eq 'Lorem ipsom'
-      end
+  describe "#subject" do
+    it "returns the article title" do
+      article = create(:article, title: 'Lorem ipsom')
+      expect(article.subject).to  eq 'Lorem ipsom'
     end
   end
 
+  describe "#last_comment" do
+    it "returns the last comment" do
+      # создаём статью с 3 комментариями
+      article = create(:article_with_comments)
+      # проверка
+      expect(article.last_comment.body).to eq "Comment body 3"
+    end
+  end
 end
